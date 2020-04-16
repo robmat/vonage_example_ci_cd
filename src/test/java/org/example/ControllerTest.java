@@ -12,7 +12,7 @@ import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.http.ResponseEntity;
 
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
-class ControllerTest {
+public class ControllerTest {
 
   @LocalServerPort
   private int port;

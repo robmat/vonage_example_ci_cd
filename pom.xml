@@ -6,7 +6,7 @@
 
   <groupId>org.example</groupId>
   <artifactId>vonage_sample_ci_cd</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>${PROJECT_NAME}</version>
 
   <parent>
     <groupId>org.springframework.boot</groupId>
@@ -45,6 +45,24 @@
             <goals>
               <goal>build-info</goal>
             </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>properties-maven-plugin</artifactId>
+        <version>1.0.0</version>
+        <executions>
+          <execution>
+            <phase>initialize</phase>
+            <goals>
+              <goal>read-project-properties</goal>
+            </goals>
+            <configuration>
+              <files>
+                <file>.env</file>
+              </files>
+            </configuration>
           </execution>
         </executions>
       </plugin>

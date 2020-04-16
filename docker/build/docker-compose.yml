@@ -1,0 +1,10 @@
+version: '3.5'
+services:
+  vonage-build:
+    container_name: vonage-build
+    build: docker/build
+    image: vonage-build:1.0
+    volumes:
+      - "./:/var/vonage-build"
+    labels:
+      name: vonage-build

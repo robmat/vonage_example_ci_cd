@@ -1,0 +1,12 @@
+version: '3.5'
+services:
+  vonage-run:
+    container_name: vonage-run
+    build: docker/run
+    image: vonage:${PROJECT_NAME}
+    volumes:
+      - "./:/var/vonage-run"
+    ports:
+      - "8080:8080"
+    labels:
+      name: vonage-runner
