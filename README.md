@@ -19,3 +19,4 @@ Build the application image and run it:
 ```
 docker-compose -f docker/run/docker-compose.yml --project-directory . up --build
 ```
+To clean the workspace of all artifacts just delete the *target* folder.

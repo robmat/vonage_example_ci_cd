@@ -2,7 +2,11 @@ version: '3.5'
 services:
   vonage-run:
     container_name: vonage-run
-    build: docker/run
+    build:
+      context: .
+      dockerfile: docker/run/Dockerfile
+      args:
+        PROJECTNAME_ARG: ${PROJECT_NAME}
     image: vonage:${PROJECT_NAME}
     volumes:
       - "./:/var/vonage-run"

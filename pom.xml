@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.example</groupId>
-  <artifactId>vonage_sample_ci_cd</artifactId>
+  <artifactId>vonage</artifactId>
   <version>${PROJECT_NAME}</version>
 
   <parent>
